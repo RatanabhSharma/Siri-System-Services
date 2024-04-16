@@ -4,29 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIRI SYSTEM & SERVICES</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <img src="images/logo.jpg" class="logo" alt="Logo">
+   
 </head>
 <body>
+    
+    <div class="navbar">
+        <a href="#"><img src="images/Designer.png" class="logo" alt="Logo"></a>
+        <ul id="sidemenu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#product">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+        </ul>
+    </div>
     <div id="Header">
         <div class="container">
-            <nav>
-                <ul id="sidemenu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
-            </nav>
+            <div class="header-text">
+                <h1>SIRI SYSTEM & SERVICES</h1>
+                <h2>ONE STOP,ALL NEEDS </h2>
+            </div>
         </div>
     </div>
-    <div class="header-text">
-        <h1>SIRI SYSTEM & SERVICES</h1>
-        <p>ONE STOP,ALL NEEDS </p>
-    </div>
+    
      <!--------------Slide Show-------------->
      <div class="slideshow-container">
 
@@ -45,7 +47,7 @@
 
         <div class="mySlides fade">
           <div class="numbertext">3 / 3</div>
-          <img src="images/Photo1.png" style="width:100%">
+          <img src="images/logo.jpg" style="width:100%">
           <div class="text">Caption Three</div>
         </div>
 
@@ -61,31 +63,73 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
+    <!-- javascript for the slides -->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+    
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+    
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+    
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+    
+          // Added missing curly braces
+          if (n > slides.length) {
+            slideIndex = 1;
+          }
+          if (n < 1) {
+            slideIndex = slides.length;
+          }
+    
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+    
+          // Added missing semicolon
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+    </script>
 
    <!------------------------Products-------------------->
+   <div id="product"> 
     <div class="products">
-        <div class="product-card">
-            <div class="product-info">
-                <h2 class="product-name">Laptops</h2>
-                <p class="product-description">We offer a wide range of laptops for all your needs.</p>
-                <a href="laptops.html" class="product-button">Shop Now</a>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-info">
-                <h2 class="product-name">Desktops</h2>
-                <p class="product-description">Our desktops are customizable and built to last.</p>
-                <a href="desktops.html" class="product-button">Shop Now</a>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-info">
-                <h2 class="product-name">Accessories</h2>
-                <p class="product-description">From mice to keyboards, we have all the accessories you need.</p>
-                <a href="accessories.html" class="product-button">Shop Now</a>
-            </div>
-        </div>
-    </div>
+        <h1 class="title">Products</h1>
+       <div class="product-card">
+           <div class="product-info">
+               <h2 class="product-name">Laptops</h2>
+               <p class="product-description">We offer a wide range of laptops for all your needs.</p>
+               <a href="laptops.html" class="product-button">Shop Now</a>
+           </div>
+       </div>
+       <div class="product-card">
+           <div class="product-info">
+               <h2 class="product-name">Desktops</h2>
+               <p class="product-description">Our desktops are customizable and built to last.</p>
+               <a href="desktops.html" class="product-button">Shop Now</a>
+           </div>
+       </div>
+       <div class="product-card">
+           <div class="product-info">
+               <h2 class="product-name">Accessories</h2>
+               <p class="product-description">From mice to keyboards, we have all the accessories you need.</p>
+               <a href="accessories.html" class="product-button">Shop Now</a>
+           </div>
+       </div>
+   </div>
+</div>
+
 
 <!--------------Services--------------------->
 <div id="services">
@@ -132,6 +176,7 @@
         </div>
     </div>
 </div>
+</div>
 
 
 <!------------------Contact us-------------------------->
@@ -139,8 +184,8 @@
     <div class="container">
         <div class="row">
             <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i> ratanabhsharma@outlook.com</p>
+                <h1>Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> sirisystem&services@gamil.com</p>
                 <p><i class="fa-solid fa-square-phone"></i>+91 62835-31856</p>
                 <div class="social-icons">
                     <a href="instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -148,16 +193,14 @@
                     <a href="linkdin/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="youtube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                 </div>
-               
             </div>
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your E-Mail" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+                    <button type="submit">Submit</button>
                 </form>
-                <!-- <span id="msg">Hello</span> -->
             </div>
             <div class="copyright">
                 <p>Copyright<i class="fa-regular fa-registered"></i> @SIRI SYSTEM & SERVICES. </p>
