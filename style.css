@@ -458,6 +458,81 @@ color: var(--text-color);
 margin-bottom: 50px;
 }
 
+/* Responsive code */
+@media screen and (max-width: 768px) {
+  .header {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .logo {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-bottom: 20px;
+  }
+
+  .header-text {
+    position: relative;
+    top: auto;
+    right: auto;
+    text-align: left;
+  }
+
+  nav {
+    justify-content: center;
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 20px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .container {
+    padding: 100px 5% 0; /* Adjusted padding for smaller screens */
+  }
+
+  .slideshow-container {
+    margin-top: 150px; /* Adjusted margin for smaller screens */
+  }
+
+  .products {
+    justify-content: center;
+  }
+
+  .product-card {
+    width: 90%;
+    margin: 20px 0;
+  }
+
+  #contact .row,
+  #services .row,
+  #about .row {
+    flex-direction: column;
+  }
+
+  #contact .contact-left,
+  #contact .contact-right,
+  #services .service-item,
+  #about .about-item {
+    width: 100%;
+    padding: 0;
+  }
+
+  #contact .contact-right form input,
+  #contact .contact-right form textarea {
+    width: calc(100% - 20px);
+  }
+}
+
+
 #about .row {
 display: flex;
 flex-wrap: wrap;
