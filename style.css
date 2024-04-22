@@ -153,14 +153,18 @@ body {
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  position: absolute;
+  position:absolute;
   bottom: 0%;
   width: 25px;
-  margin-top: -22px;
+  margin-bottom: 500px;
+  display:flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
   padding: 16px;
-  color: white;
+  color: #735a5a,;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 30px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -235,15 +239,16 @@ body {
   flex-wrap: wrap;
   margin: 0 auto;
   max-width: 1200px;
+  padding: 100px 0;
 }
 .product-card {
   box-shadow: 0 4px 8px 0 rgba(7, 16, 192, 0.681);
   transition: 0.3s;
   width: 300px;
   height: 400px;
-  margin: 20px;
+  margin: 50px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -291,7 +296,7 @@ body {
 
 /* ------------------------------------------------------Contact us---------------------------------------- */
 #contact {
-  background-color: var(--background-color);
+  background-color: var(--text-color);
   padding: 50px 0;
 }
 
@@ -313,13 +318,13 @@ body {
 
 #contact .contact-left h1 {
   font-size: 30px;
-  color: var(--text-color);
+  color: var(--background-color);
   margin-bottom: 20px;
 }
 
 #contact .contact-left p {
   font-size: 18px;
-  color: var(--text-color);
+  color: var(--background-color);
   margin-bottom: 10px;
 }
 
@@ -343,7 +348,7 @@ body {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #476a9f;
+  background-color: var(--background-color);
   margin-bottom: 20px;
 }
 
@@ -357,7 +362,7 @@ body {
   border: none;
   border-radius: 5px;
   background-color: #007bff;
-  color: #050505;
+  color: var(--background-color);
   cursor: pointer;
 }
 
@@ -371,14 +376,14 @@ body {
 }
 
 #contact .copyright p {
-  color: var(--text-color);
+  color: var(--background-color);
   font-size: 16px;
 }
 
 
 /*------------------------------------Services------------------------------------------ */
 #services {
-  padding: 50px 0;
+  padding: 100px 0;
   background-color: #f5f5f5;
 }
 
@@ -425,9 +430,9 @@ body {
   color: var(--text-color);
   line-height: 1.5;
 }
-
+/* About */
 #about {
-padding: 50px 0;
+padding: 100px 0;
 background-color: #f5f5f5;
 }
 
